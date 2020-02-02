@@ -14,6 +14,11 @@ steps:
   displayName: 'Install wheel'
 
 - script: |
+    python -m pip install delocate
+    /Library/Frameworks/Python.framework/Versions/$(python.version)/bin/delocate-wheel dist/$(package_name)*.whl
+  displayName: 'Delocate wheels'
+
+- script: |
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
