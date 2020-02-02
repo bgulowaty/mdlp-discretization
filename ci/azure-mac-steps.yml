@@ -2,7 +2,6 @@ steps:
 
 - script: |
     python -m pip wheel . -w wheelhouse/
-    python setup.py bdist_wheel
   displayName: 'Build'
 - script: |
     ls -lh wheelhouse
