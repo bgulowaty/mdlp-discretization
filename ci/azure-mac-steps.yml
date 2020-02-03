@@ -16,7 +16,7 @@ steps:
 - script: |
     pip install delocate
     which delocate-wheel
-    delocate-wheel dist/$(package_name)*.whl
+    delocate-wheel dist/*.whl
   displayName: 'Delocate wheels'
 
 - script: |
