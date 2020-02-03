@@ -19,8 +19,8 @@ steps:
   displayName: 'Delocate wheels'
 
 - script: |
-    pip install pytest pytest-azurepipelines
-    pytest
+    python -m pip install pytest pytest-azurepipelines
+    python -m pytest
   displayName: 'pytest'
 # - task: TwineAuthenticate@1
 #   inputs:
