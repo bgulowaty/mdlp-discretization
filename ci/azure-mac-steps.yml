@@ -14,8 +14,9 @@ steps:
   displayName: 'Install wheel'
 
 - script: |
-    python -m pip install delocate
-    /Library/Frameworks/Python.framework/Versions/$(python.version)/bin/delocate-wheel dist/$(package_name)*.whl
+    pip install delocate
+    which delocate-wheel
+    delocate-wheel dist/$(package_name)*.whl
   displayName: 'Delocate wheels'
 
 - script: |
